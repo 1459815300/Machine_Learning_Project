@@ -46,3 +46,23 @@ Applications:
     - Risk modeling
     - Basic baseline model in machine learning
 """
+from sklearn.linear_model import LinearRegression
+
+# Training feature data (e.g., height in cm)
+x_train=[[160],[166],[172],[174],[180]]
+# Training target values (e.g., weight in kg)
+y_train=[56.3,60.6,65.1,68.5,75]
+# Test feature data (new sample for prediction)
+x_test=[[176]]
+# Create a Linear Regression model instance
+estimator=LinearRegression()
+# Fit the model using training data
+estimator.fit(x_train,y_train)
+# Output the learned coefficient (slope)
+print(estimator.coef_)
+# Output the learned intercept (bias)
+print(estimator.intercept_)
+# Use the trained model to make predictions
+y_pred=estimator.predict(x_test)
+# Output the predicted result
+print(y_pred)
