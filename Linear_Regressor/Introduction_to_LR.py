@@ -28,9 +28,14 @@ Formula:
         w : weight(s) (model parameters)
         b : bias (intercept)
 
-    Loss Function (Mean Squared Error, MSE):
+   Loss Function:
+    Mean Squared Error (MSE):
         MSE = (1/n) * Σ (y_i - ŷ_i)^2
 
+    Mean Absolute Error (MAE):
+        MAE = (1/n) * Σ |y_i - ŷ_i|
+     Root Mean Squared Error (RMSE):
+        RMSE = sqrt((1/n) * Σ (y_i - ŷ_i)^2)
     Optimization:
         - Gradient Descent
         - Normal Equation (closed-form solution)
